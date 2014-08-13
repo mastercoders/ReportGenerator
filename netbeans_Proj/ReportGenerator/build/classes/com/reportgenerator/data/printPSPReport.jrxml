@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report3" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="96"/>
+	<parameter name="idno" class="java.lang.String"/>
+	<parameter name="maturity date" class="java.lang.String"/>
+	<parameter name="unit" class="java.lang.String"/>
+	<parameter name="amount" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="address2" class="java.lang.String"/>
+	<parameter name="address3" class="java.lang.String"/>
+	<parameter name="district" class="java.lang.String"/>
+	<parameter name="pincode" class="java.lang.String"/>
+	<parameter name="state" class="java.lang.String"/>
+	<parameter name="village" class="java.lang.String"/>
+	<parameter name="nominee" class="java.lang.String"/>
+	<parameter name="amount in words" class="java.lang.String"/>
+	<parameter name="agreement no" class="java.lang.String"/>
+	<parameter name="topup date" class="java.lang.String"/>
+	<parameter name="maturityamt" class="java.lang.String"/>
+	<variable name="fulladdress" class="java.lang.String"/>
+	<variable name="fulladdress2" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<textField>
+				<reportElement x="79" y="220" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{idno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="220" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{topup date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="220" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{maturity date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="265" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{unit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="312" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Active]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="179" y="332" width="156" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="358" width="306" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="382" width="306" height="35"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{address}+" , "+$P{address2}+(("null".equals($P{address3})) ? "" : " , "+$P{address3})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="77" y="410" width="406" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{village}+" , "+$P{district}+" , "+$P{pincode}+" , "+$P{state}+" ,India"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="441" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{nominee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="469" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{maturityamt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="505" width="187" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="161" y="532" width="325" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{amount in words}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="616" width="141" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{agreement no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="638" width="141" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{topup date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
